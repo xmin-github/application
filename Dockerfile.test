@@ -1,0 +1,9 @@
+FROM golang:1.10.1
+LABEL Maintainer xmin
+LABEL Environment test
+
+WORKDIR /go/src/github.com/xmin/application
+
+COPY . .
+
+CMD go test
