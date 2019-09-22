@@ -8,7 +8,7 @@ node('slaves'){
 
     stage('Test'){
         docker.build("${imageName}:${env.BUILD_ID}", '-f Dockerfile.test .')
-        sh "/usr/bin/docker run --rm ${imageName}:${env.BUILD_ID}"
+        sh "docker run --rm ${imageName}:${env.BUILD_ID}"
     }
 
     stage('Build'){
