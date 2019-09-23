@@ -25,9 +25,9 @@ node('slaves'){
         }
     }
 
-    /*stage('Deploy'){
+    stage('Deploy'){
         build job: "deployment/master"
-    }*/
+    }
 }
 
 def commitID() {
